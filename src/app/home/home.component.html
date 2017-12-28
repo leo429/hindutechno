@@ -1,0 +1,30 @@
+<h2>Products List</h2>
+{{title}}
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Color</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let product of products; let i= index">
+      <td>{{i+1}}</td>
+      <td><a routerLink="/product/{{product._id}}">{{product.name}}</a></td>
+      <td>{{product.color}}</td>
+      <td><button (click)="deleteProduct(product._id)" class="btn btn-sm btn-danger">Delete</button></td>
+    </tr>
+  </thead>
+</table>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+    <tr *ngFor="let node of nodes">
+      <td>{{node.name}}</td>
+    </tr>
+  </thead>
+</table>
+

@@ -1,0 +1,20 @@
+<h3>
+  Add Product
+</h3>
+
+<p class="text-right"><button (click)="goBack()" class="btn btn-sm btn-primary">Back</button></p>
+
+<form id="formNewProduct" name="formNewProduct" #productData="ngForm" (ngSubmit)="addProduct(productData.value)">
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Product Name</label>
+    <input type="text" name="name" id="name" placeholder="Name" ngModel class="form-control"/>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Color</label>
+    <input type="text" name="color" id="color" placeholder="Color" ngModel class="form-control"/>
+  </div>
+  <div class="form-group">
+      <input type="submit" value="Add Product" class="btn btn-secondary" />
+  </div>
+
+</form>
